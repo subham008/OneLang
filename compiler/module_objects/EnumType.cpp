@@ -8,6 +8,7 @@
 #include<string>
 #include<list>
 
+
   class EnumType
   {
   public:
