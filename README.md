@@ -25,17 +25,17 @@
 **we are using c++  to  build  this language, so you should learn c++ basics including classes**
 
 At first create a folder of any name, here we are named it OneLangSource
-
->mkdir OneLangSource
-
+```
+mkdir OneLangSource
+```
 now move to that folder
-
->cd OneLangSource
-
+```
+cd OneLangSource
+```
 now run a terminal command to download repo using git command line tool
-
->git clone https://github.com/subham008/OneLang.git
-
+```
+git clone https://github.com/subham008/OneLang.git
+```
 NOTE : if git not installed , then follow this link [git](https://git-scm.com/downloads)
 
 it will take time to downlaod all resources
@@ -79,15 +79,18 @@ Now install required packages through running below commads on **mingw64**  term
 
 
 **To install clang run this command**
->pacman -S mingw-w64-x86_64-clang
-
+```
+pacman -S mingw-w64-x86_64-clang
+```
 **To install LLVM tool run this command**
->pacman -S mingw-w64-x86_64-llvm
+```
+pacman -S mingw-w64-x86_64-llvm
+```
 
 **To install LLD , run this command**
-
+```
 >pacman -S mingw-w64-x86_64-lld
-
+```
 
 
 
