@@ -22,6 +22,7 @@
 
 
 # How to start contributing
+**we are using c++  to  build  this language, so you should learn c++ basics including classes**
 
 At first create a folder of any name, here we are named it OneLangSource
 
@@ -42,6 +43,18 @@ it will take time to downlaod all resources
 Once its done open that OneLang folder on your favourite IDE
 
 **note: vscode is recommended**
+
+
+
+# Folder details
+
+**.vscode** This folder is created by VSCODE itself it contains vscode setting and cpp_configuratiion
+
+**OneLangSamples** This folder contains sample codee written in OneLang, you can check it out to understand more about OneLang
+
+**compiler** This folder contains c++ code for compiling OneLang programm to machine codes or bytecodes
+
+
 
 
 
