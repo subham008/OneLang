@@ -66,7 +66,11 @@ We are using LLVM to compile our program
 
 source_code -> lexer -> Module(AST) -> LLVM IR -> compiled bytecode
 
+**IF YOU ARE A CONTRIBUTER , YOU SHOULD JOIN OUR Discord server**
 
+# Our Discord server 
+
+[OneLang Discord](https://discord.gg/gMTRWB8f)
 
 
 
