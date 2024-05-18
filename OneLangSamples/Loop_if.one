@@ -1,0 +1,19 @@
+
+print("Enter name")
+name=scan(string) 
+
+for ch in name   
+    if (int)ch > 0
+        print("character")
+    else
+        print("not a character")
+
+
+
+string rev,i=name.length()-1
+
+while i>=0
+    rev=rev+str.at(i)
+    i--
+
+print("reverse string :",rev)

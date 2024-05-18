@@ -1,0 +1,21 @@
+
+
+print("staretd compiling")
+
+class Heap
+
+    string name,int length
+    int id
+
+    Heap(int id){
+        name="subam"
+        length=89
+        this.id=id
+    }
+
+
+
+
+    ~Heap(){
+        print("destructing)
+    }

@@ -1,0 +1,18 @@
+import std.string.parse
+import /myLib.module.parse 
+import "c:/std/my/lib/none.onne"
+
+enum phone
+    samsung
+    nokia
+    apple
+    xiami
+    realme
+
+
+enum fn
+    while
+    else
+    apple
+    xiami
+    realme

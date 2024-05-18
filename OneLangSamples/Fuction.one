@@ -1,0 +1,18 @@
+impoer one.std
+
+print("Enter a string")
+name=scan(string) //gettting string from user
+
+print("ascii is" , getAscii(name , 8))
+
+
+fn int getSafeAscii(string name , int n)   
+    ch=name.at(n)
+        switch(Error)
+            case string.INDEX_MORE
+                ch=name.last()
+            case string.NEGATIVE_INDEX
+                ch=name.first()
+    return (int)ch            
+
+    

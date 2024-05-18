@@ -1,0 +1,65 @@
+import std.string.parse  
+import /myLib.module.parse 
+
+x = 5
+f=90.98f
+samd=34.89
+
+
+if x > 3
+    y = x * 2
+    print(y)
+    if y<0
+        name="subam shaw"
+        n='c'
+else:
+    print(x)    
+
+//comment line 
+
+sample_array={ 89,56,54,90 }
+sample_list=[ 45, 89 , 90 , 65 ]
+sample_tuple = (34 , 34.89 , 23f , "subham" , 'v' )
+
+
+sample_hex=0xFAFAFAA
+sample_binary=b10101011
+sample_octal=0x2377
+
+
+fn void count()
+    print("cout called")
+
+enum sample
+    SAMPLE_NODE1
+    SAMPLE_NODE2
+    SAMPLE_NODE3
+
+
+struct sample_struct
+    int age
+    string name
+    float marks
+    double weight
+
+
+class sample_class
+    int age
+    string name
+
+    self( string name , age )
+        self.name=name;
+        self.age=age;
+    
+    void printName()
+        print(name)
+    
+    void printage()
+        print(age)
+
+
+
+
+
+
+          
