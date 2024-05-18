@@ -1,6 +1,7 @@
 OneLang is a programming language that aims to be the one language to conquer all  application , no need to learn diffrent languages , one language for every thing 
 
 how we planned to achieve
+
    .indentation based language(Python like syntax)
    .memory safe (compiler time memory management system)
    .can be interpret , compiled
@@ -12,4 +13,4 @@ how we planned to achieve
 
 go to OneLangSamples folder and check the sample codes , to get better context and if you  think you want to contribute , dont hesitate just copy repo on your system  using this link 
 
-#https://github.com/subham008/OneLang.git
+https://github.com/subham008/OneLang.git
