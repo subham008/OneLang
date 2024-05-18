@@ -1,4 +1,4 @@
-**OneLang** is a **programming language** that aims to be the one language to conquer all  application , no need to learn diffrent languages , **one language for every thing** 
+**OneLang** is a **programming language** that aims to be the one language to conquer all  application , no need to learn diffrent languages , **one language for every thing** , system developement, web developement, app developement , or any type for software developement it aims to fit in all this sectors
 
 
 **NOTE : THIS LANGUAGE IS NOT READY , IT,S UNDER DEVELOPEMENT**
@@ -10,9 +10,9 @@
 
    * can be interpret , compiled
 
-   * large set of  available compiled target as we use LLVM (e.g x86,x86_64,arm , aarch,thump,risc,wasm and many more that you may never heard of) .  for more details follow this link https://llvm.org/docs/CompilerWriterInfo.html
+   * large set of  available compiled target as we use [LLVM](https://llvm.org/) (e.g x86,x86_64,arm , aarch,thump,risc,wasm and many more that you may never heard of) .  
 
-   * own build tool and package library inpired by rust cargo(https://doc.rust-lang.org/cargo/commands/cargo-build.html) and crates(https://crates.io/)
+   * own build tool and package library inpired by rust [cargo](https://doc.rust-lang.org/cargo/commands/cargo-build.html) and [crates](https://crates.io/)
 
 
    * modern features
@@ -36,7 +36,7 @@ now run a terminal command to download repo using git command line tool
 
 >git clone https://github.com/subham008/OneLang.git
 
-NOTE : if git not installed , then follow this link https://git-scm.com/downloads
+NOTE : if git not installed , then follow this link [git](https://git-scm.com/downloads)
 
 it will take time to downlaod all resources
 
@@ -57,6 +57,14 @@ Once its done open that OneLang folder on your favourite IDE
 **compiler** This folder contains c++ code for compiling OneLang program to machine codes or bytecodes
 
 **llvm_test** This is just to learn about llvm it is not responsible for anything in this project
+
+
+
+# how we Compile
+
+We are using LLVM to compile our program 
+
+source_code -> lexer -> Module(AST) -> LLVM IR -> compiled bytecode
 
 
 
