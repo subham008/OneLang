@@ -48,12 +48,15 @@ Once its done open that OneLang folder on your favourite IDE
 
 # Folder details
 
-**.vscode** This folder is created by VSCODE itself it contains vscode setting and cpp_configuratiion
+**.vscode** This folder is created by VSCODE itself it contains vscode setting and cpp_configuration
 
-**OneLangSamples** This folder contains sample codee written in OneLang, you can check it out to understand more about OneLang
+**AST** This folder contains lexer and parser it is responsible to convert raw code or text to AST  here we call it Module it contains all function, variables, instruction in form of std::list<..>
 
-**compiler** This folder contains c++ code for compiling OneLang programm to machine codes or bytecodes
+**OneLangSamples** This folder contains sample code written in OneLang, you can check it out to understand more about OneLang
 
+**compiler** This folder contains c++ code for compiling OneLang program to machine codes or bytecodes
+
+**llvm_test** This is just to learn about llvm it is not responsible for anything in this project
 
 
 
