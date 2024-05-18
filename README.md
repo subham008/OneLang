@@ -44,6 +44,52 @@ Once its done open that OneLang folder on your favourite IDE
 
 **note: vscode is recommended**
 
+# Skills Required
+
+* c/c++ basics with class,struct,pointer and  reference pointer
+* compiling and linking  of code 
+* basic understanding of  computer working
+* well understanding on any one operating system like windows,linux or mac
+* well understanding of LLVM , how it works and how to use it in c++
+
+To learn about LLVM we recommend you a youtube [tutorial](https://youtu.be/Lvc8qx8ukOI?si=qgf4jA4B-CPgzryp) of 20 videos , it worth time
+
+
+# Tools required
+
+* clang and clang++ (version 17 or above)
+* LLVM tools (17.0.6 or above)
+
+if you are using **linux or macOS** its easy for you to install this tools
+but if you are using **windows** its very hard to install all these manually
+
+so , we reccomend install [MSYS2](https://www.msys2.org/) on your windows device .
+
+Now MSYS2 have multiple enviroments e.g clang32,clang64,ucrt32,ucrt64,mingw32,mingw64 and etc.
+
+we will use **mingw64** enviroment or Terminal 
+
+**mingw64**  use pacman to install and manage packages , it has huge list of [packages](https://packages.msys2.org/base)
+
+**STEPS TO INSTALL TOOLS**
+
+open **mingw64** terminal just by search on menu
+
+Now install required packages through running below commads on **mingw64**  terminal
+
+
+**To install clang run this command**
+>pacman -S mingw-w64-x86_64-clang
+
+**To install LLVM tool run this command**
+>pacman -S mingw-w64-x86_64-llvm
+
+**To install LLD , run this command**
+
+>pacman -S mingw-w64-x86_64-lld
+
+
+
 
 
 # Folder details
