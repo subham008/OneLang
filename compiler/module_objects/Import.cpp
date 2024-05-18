@@ -1,7 +1,7 @@
 #ifndef _IMPORT_TYPE_
 #define _IMPORT_TYPE_
 
-#include"E:\SampleLanguage\lexer\lexer.cpp"
+#include"../lexer.cpp"
 #include "error_printer.cpp"
 #include<string>
 #include<iostream>

@@ -1,8 +1,9 @@
 #ifndef _ENUM_TYPE_
 #define _ENUM_TYPE_
 
-#include"E:\SampleLanguage\lexer\lexer.cpp"
-#include"E:\SampleLanguage\lexer\KeyWords.cpp"
+//#include"E:\SampleLanguage\lexer\lexer.cpp"
+#include"../KeyWords.cpp"
+#include"../lexer.cpp"
 #include"error_printer.cpp"
 #include<string>
 #include<list>

@@ -12,7 +12,7 @@
 #include<iostream>
 #include<string>
 #include<list>
-#include"E:\SampleLanguage\lexer\lexer.cpp"
+#include"../lexer.cpp"
 
 
 
