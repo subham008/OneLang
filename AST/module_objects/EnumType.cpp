@@ -7,7 +7,7 @@
 #include"error_printer.cpp"
 #include<string>
 #include<list>
-
+#include<iostream>
 
   class EnumType
   {
@@ -34,26 +34,53 @@
        std::string name = (it)->token; 
       
        if(isKeyword(name))
-           print_error(* it , "keywords cant be use as name" , ErrorType::SYNTAX_ERROR);
+           print_error(* it , "keywords cant be use as name" , ErrorType::INVALID_NAME_ERROR);
 
        EnumType etype = EnumType(name , *it ); 
        
-        ++it; // to reach the first Enum value
+       // to move to first values
+       it++;
+       while(it->token == "\n")
+         it++;
+      
 
-       while(it->indent_value > enum_indent_level){
+       int first_value_indent=-1;
+       if(it->indent_value > enum_indent_level )
+             first_value_indent =it->indent_value;
+       else{
+           print_error(*it,"invalid indentation give space before enum values" , ErrorType::INDENTATION_ERROR);
+           // if first value have wrong indentation then  we cant identify where enum value ends so we have to make this enum invalid
+          return etype;
+       }
+
+
+       
+       while( (it->indent_value > enum_indent_level  ||  it->token == "\n") && it!=end ){
+           if(it->token=="\n"){
+             it++;
+             continue;
+           }
+
+           if(it->indent_value != first_value_indent){
+                   print_error(*it , "All values of enum should be in same line or have same indentation", ErrorType::INDENTATION_ERROR) ;
+                   it++;
+                   continue;
+           }
+
            if(isText(it->token)){
+              //std::cout<<"enum text found"<<name<<std::endl;
               if(isKeyword(it->token))
-                  print_error(*it , "keywords cant be use as name" , ErrorType::SYNTAX_ERROR);
+                  print_error(*it , "keywords cant be use as name" , ErrorType::INDENTATION_ERROR);
               else
               etype.enum_values.push_back(it->token);
            }
 
             it++;
-       }
+       }//end of while
 
 
        if(etype.enum_values.size()<=0)
-           print_error(*--it , "enum with no value not allowed", ErrorType::VALUE_ERROR);
+           print_error(*--it , "enum with no value not allowed before enum values", ErrorType::VALUE_ERROR);
         
       return etype; 
 

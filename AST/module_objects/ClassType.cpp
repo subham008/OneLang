@@ -2,13 +2,16 @@
 #define _CLASS_
 
 
+#include<string>
+
+
 class ClassType
 {
-private:
-    /* data */
 public:
-    ClassType(/* args */);
-    ~ClassType();
+    std::string class_name;
+
+    ClassType(std::string name) : class_name(name) {}
+   
 };
 
 

@@ -68,22 +68,26 @@ private:
         return indent;
     }
 
-    Token nextToken(const std::string& line , uint64_t line_count) {
-        std::string token;
-        while (current_pos < line.size() && !std::isspace(line[current_pos])) {
-            if (std::ispunct(line[current_pos])) {
-                if (!token.empty()) {
-                    return Token{token, current_indent , line_count ,current_pos , source_name , raw_code};
-                } else {
-                    token += line[current_pos++];
-                    return Token{token, current_indent , line_count , current_pos , source_name  , raw_code};
-                }
+    Token nextToken(const std::string& line, uint64_t line_count) {
+    std::string token;
+    while (current_pos < line.size() && !std::isspace(line[current_pos])) {
+        if (std::ispunct(line[current_pos]) && line[current_pos] != '_') {
+            if (!token.empty()) {
+                return Token{token, current_indent, line_count, current_pos, source_name, raw_code};
             } else {
                 token += line[current_pos++];
+                return Token{token, current_indent, line_count, current_pos, source_name, raw_code};
             }
+        } else {
+            token += line[current_pos++];
         }
-        return Token{token, current_indent , line_count ,current_pos , source_name , raw_code};
     }
+    return Token{token, current_indent, line_count, current_pos, source_name, raw_code};
+}
+// end of nextToken
+
+
+
 };
 
 void lexer_test(const std::string& filename) {
@@ -111,10 +115,9 @@ void lexer_test(const std::string& filename) {
 
 bool isText(std::string& t){
     // if first and last charater  is an alphabet then we consider it as text
-     char f= t.at(0);
-     char l=t.at(t.length()-1);
-
-      if( ( (f >= 'a' && f<= 'z') || ( f >= 'A' && f<= 'Z') ) && ((l >= 'a' && l<= 'z') ||  (l >= 'A' && l<= 'Z') )  )
+     int  f= (int)t.at(0);
+     
+      if(  (f>=65 && f<=90)  || ( f>=97 && f<=122) || f==95)
          return true;
 
 

@@ -1,13 +1,16 @@
 #ifndef _STRUCT_TYPE_
 #define _STRUCT_TYPE_
 
+
+#include<string>
+
 class StructType
-{
-private:
-    /* data */
+{   
 public:
-    StructType(/* args */);
-    ~StructType();
+    std::string struct_name;
+
+    StructType(std::string name) : struct_name(name){}
+    
 };
 
 

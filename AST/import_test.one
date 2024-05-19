@@ -5,14 +5,14 @@ import "c:/std/my/lib/none.onne"
 enum phone
     samsung
     nokia
-    apple
+    hakla
     xiami
     realme
 
 
-enum fn
-    while
-    else
-    apple
+enum device
+    apple_device
+    subham
+     apple
     xiami
     realme

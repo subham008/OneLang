@@ -34,8 +34,10 @@
 enum ErrorType{
   SYNTAX_ERROR,
   FILE_NOT_FOUND,
+  INVALID_NAME_ERROR,
   DUPLICATE_IDENTIFIER,
   UNEXPECTED_IDENTIFIER,
+  INDENTATION_ERROR,
   VALUE_ERROR,
   COMPILER_ERROR
 };
@@ -63,6 +65,12 @@ const char* getErrorTypeToString(ErrorType ty){
     case VALUE_ERROR:
        return "VALUE ERROR";
        break;
+    case INDENTATION_ERROR:
+      return "INDENTATION ERROR";
+       break;
+    case INVALID_NAME_ERROR:
+      return "INVALID NAME";
+      break;
     default:
         return "UNKNOWN ERROR";
         break;
@@ -74,7 +82,7 @@ void print_error( const Token& token  ,  std::string messege="unexpected identif
    //checking is src has that line
    if( token.line_number > token.raw_code.size()) {
       std::cout<<YELLOW <<getErrorTypeToString(COMPILER_ERROR)<<" : dont worry it is our fault , please report this error to OneLang community"<<RESET<<std::endl;
-      std::cout<<RED<<"error occured at  error_printer.cpp->print_error(...) :  line_number is bigger than total lines"<<RESET<< std::endl;
+      std::cout<<"\t"<<RED<<"error occured at  error_printer.cpp->print_error(...) :  line_number is bigger than total lines"<<RESET<< std::endl;
       return;
    }
      
@@ -85,14 +93,14 @@ void print_error( const Token& token  ,  std::string messege="unexpected identif
 
      if(token.token_index <= line.length()){
       std::cout<<YELLOW<<token.src_name<<"  at "<<token.line_number+1<<':'<<token.token_index<< " -----> "<<RED<< getErrorTypeToString(type)<<RESET  <<std::endl<<std::endl; //printing error type and line at which error occured
-      std::cout<<line<<std::endl;
+      std::cout<<"\t"<<line<<std::endl<<"\t";
       
       for(int i=0; i<token.token_index-token.token.length() ; i++)
          std::cout<<" ";
       
       std::cout<<RED<<token.token<<std::endl<<std::endl;
 
-      std::cout<<messege<<RESET <<std::endl;
+      std::cout<<"\t"<<messege<<RESET <<std::endl;
 
       std::cout<<GREEN<<"  -------------------"<<RESET<<std::endl;
      }
