@@ -89,7 +89,7 @@ pacman -S mingw-w64-x86_64-llvm
 
 **To install LLD , run this command**
 ```
->pacman -S mingw-w64-x86_64-lld
+pacman -S mingw-w64-x86_64-lld
 ```
 
 
