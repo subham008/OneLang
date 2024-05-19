@@ -1,7 +1,0 @@
-print("Enter name")
-name=scan(string)
-for ch in name
-    if (int)ch > 0
-        print("character")
-    else
-        print("not a character")

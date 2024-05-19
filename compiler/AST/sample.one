@@ -1,9 +1,0 @@
-import std
-
-print("hello world")
-
-a=89
-b=78
-
-
-print("add is " , a+b)
