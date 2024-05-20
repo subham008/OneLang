@@ -7,17 +7,18 @@
 #include<llvm/IR/IRBuilder.h>
 #include<llvm/IR/LLVMContext.h>
 #include<llvm/IR/Module.h>
-
+#include"../AST/Module.cpp"
 
 class Compiler{
     
+    Module& module;
     std::unique_ptr<llvm::LLVMContext> context;
     std::unique_ptr<llvm::Module>   module;
 
 
      public:
 
-     Compiler(){
+     Compiler(Module& mod)  :  module(mod) {
         context=std::make_unique<llvm::LLVMContext>();
         module=std::make_unique<llvm::Module>("Compiler" , *context);
      } 
@@ -25,7 +26,7 @@ class Compiler{
 
      void compile(const std::string& program){
          
-         
+         //TODO
 
         saveModuleToFile("module.ll");
      }
