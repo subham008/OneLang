@@ -13,6 +13,16 @@ enum phone
 enum device
     apple_device
     subham
-     apple
+    apple
     xiami
     realme
+
+
+
+struct Device
+    int age;
+    int id
+    string man_name
+    string loc
+    u8 agreement_id
+

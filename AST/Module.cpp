@@ -78,6 +78,15 @@ void find_keywods(std::list<Token>::iterator it , std::list<Token>::iterator end
             else if(ety.enum_values.size()!=0)            
               enum_declaretion.push_back( ety);
        }
+       else if(it->token == keyword::STRUCT){
+           //  struct found and wil be consume
+           StructType stype =  consume_struct(it , end);
+           if( checkForDuplicate(stype ,  this->struct_declaretion))
+                print_error(stype.name_token , "struct with same name already exist" , ErrorType::DUPLICATE_IDENTIFIER);
+            else if(stype.v_name_list.size()!=0)   
+                struct_declaretion.push_back(stype);
+
+       }
 }
 
 

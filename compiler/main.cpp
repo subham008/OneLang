@@ -44,8 +44,8 @@ int main(int argc , char* argv[]){
     
     printf("compiler IR : \n\n\n");
     
+
     addInteger(*mod , *context , "num_of_devices" , 234);
-    //addFloat(*mod , *context , "x_axis" , 2347);
     addString(*mod , *context , "my_name" , "subham shaw"); 
     addGlobalIntArray(*mod , *context , "marks" , {23,45,78,12,90});
     addFunction(*mod , *context , "main" ,llvm::Type::getInt16Ty(*context) , {llvm::Type::getInt16Ty(*context) , llvm::Type::getInt16Ty(*context)  });
@@ -54,7 +54,7 @@ int main(int argc , char* argv[]){
     saveModule(*mod , "out.ll");
 
     return 0;
-}
+}// end of main
 
 
 
@@ -147,7 +147,7 @@ void addFunction(
     );
 
     // Create a basic block and set the insertion point to it
-    llvm::BasicBlock *block = llvm::BasicBlock::Create(context, "", function);
+    llvm::BasicBlock *block = llvm::BasicBlock::Create(context, "entry", function);
     llvm::IRBuilder<> builder(block);
 
     // Retrieve function arguments
