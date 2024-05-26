@@ -1,7 +1,10 @@
 #ifndef _VARIABLES_
 #define _VARIABLES_
 
-   
+   #include<string>
+   #include"Expression.cpp"
+   #include"Value.cpp"
+
    enum VariableType{
       INT,
       FLOAT,
@@ -23,24 +26,22 @@
       TUPLE,
       ENUM,
       VOID,
-      POINTER
+      POINTER,
+      NOT_VARIABLE_TYPE
    };
 
-
-   #include<string>
-   #include"Expression.cpp"
 
    class Variable{
     public:
      VariableType type;
      std::string type_name;
      std::string variable_name;
-     const Expression& value;
+     Value value;
      
      Variable(VariableType ty ,
               std::string tn=" ",
                std::string vn =" ", 
-               const  Expression& ex =Expression() ): type(ty),type_name(tn),variable_name(vn),value(ex){}
+               const  Value& ex =Expression() ): type(ty),type_name(tn),variable_name(vn),value(ex){}
 
 
    }; // end of variable

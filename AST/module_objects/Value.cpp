@@ -1,13 +1,18 @@
-#ifndef _VALUE-
+#ifndef _VALUE_
 #define _VALUE_
 
 
 #include "Variable.cpp"
 #include<string>
 
-struct Value{
+class Value{
+    public:
     ValueType valueType;
-    std::string value;
+    void* value;
+    
+    ~Value(){
+        delete value;
+    }
 };
 
 
@@ -15,7 +20,16 @@ struct Value{
 enum ValueType{
     FUNCTION_VALUE,
     VARIABLE_VALUE,
-    IMMEDIATE_VALUE,
+    INTEGER_DECLARETION,
+    CHAR_DECLARETION,
+    STRING_DECLARETION
+    BOOLEAN_DECLARETION,
+    CLASS_DECLARETION,
+    LIST_DECLARETION,
+    TUPLE_DECLARETION,
+    ARRAY_DECLARETION,
+    STRUCT_DECLARETION
 }
+
 
 #endif

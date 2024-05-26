@@ -14,7 +14,7 @@ enum device
     apple_device
     subham
     apple
-    xiami
+    xioami
     realme
 
 
@@ -25,4 +25,37 @@ struct Device
     string man_name
     string loc
     u8 agreement_id
+
+
+
+pub func int getadd()
+    print("subham")
+    print("jsnscS")
+    return 35
+
+n=78
+
+int count=56+45+n+getadd()  // this is instruction
+        //from here expression started
+
+np.call(a ,b) // this is instruction
+
+
+
+np.name=34+89 // this is instruction
+       //from here expression started
+
+
+
+// there are two types of struct declaretion
+
+shape = Shape{x=45,y=89,w=56,h=45} //a normal way for declaring struct
+
+shape = Shape
+            x=45
+            y=89
+            w=56
+            h=45
+            
+
 

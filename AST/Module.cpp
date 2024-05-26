@@ -87,6 +87,12 @@ void find_keywods(std::list<Token>::iterator it , std::list<Token>::iterator end
                 struct_declaretion.push_back(stype);
 
        }
+
+
+    VariableType getType(std::string typename){
+       //TODO
+       return VariableType.VOID;
+    }
 }
 
 
