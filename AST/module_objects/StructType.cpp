@@ -14,10 +14,7 @@ public:
     std::list<std::string> v_name_list;
     Token& name_token;
     //constructer
-    StructType(std::string name , Token& tok) : struct_name(name) ,  name_token(tok) {}
-
-
-    
+    StructType(std::string name , Token& tok) : struct_name(name) ,  name_token(tok) {}    
 };
 
 

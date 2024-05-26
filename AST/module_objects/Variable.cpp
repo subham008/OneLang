@@ -43,9 +43,7 @@
                const  Expression& ex =Expression() ): type(ty),type_name(tn),variable_name(vn),value(ex){}
 
 
-
-     
-   };
+   }; // end of variable
 
 
 
