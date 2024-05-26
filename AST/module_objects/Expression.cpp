@@ -5,29 +5,36 @@
 
 #include "Value.cpp"
 #include "Operator.cpp"
-
+#include<list>
 
 struct ExpMinor{
       Value val1;
       Operator opt;
-      Value val2;
 };
 
 
  class Expression
- {
- private:
-     
+ {    
  public:
-    Expression(){}
-    
- };
+    std::list<ExpMinor> exp_list;
+
+    Expression() {} 
+ };  // end of  Expression
  
 
 
 
-void consume_expression(std::list<Token>::iterator& it , std::list<Token>::iterator& end){
-     //TODO
+Expression consume_expression(std::list<Token>::iterator& it , std::list<Token>::iterator& end){
+    
+    //TODO
+
+    // sample expression adding code
+     Expression exp = Expression();
+     exp.exp_list.push_back( ExpMinor{ Value{ValueType.FUNCTION_VALUE , *it}  , Operator.PLUS_OP } );
+
+     // sample end exp code
+      exp.exp_list.push_back( ExpMinor{ Value{ValueType.FUNCTION_VALUE , *it}  , Operator.NO_OP } );
+
 } // end of consume_ expression function
 
 

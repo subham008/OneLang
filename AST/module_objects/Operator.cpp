@@ -44,12 +44,15 @@ enum Operator{
    XOR_BIT_ASSIGN_OP, // ^=
    LEFT_SHIFT_ASSIGN_OP, // <<=
    RIGHT_SHIFT_ASSIGN_OP, // >>=
+   
 
+   NO_OP // to mark as end of expression
 };
 
 
 
 std::string getOperator(Operator op){
+    //TODO
        return "+";
 }
 
