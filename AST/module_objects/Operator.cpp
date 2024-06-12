@@ -100,4 +100,50 @@ std::string getOperator(Operator op) {
 
 
 
+
+Operator getOperator( std::list<Token>::iterator& it , std::list<Token>::iterator& end , std::string& op){
+  if (it == end) {
+        return NO_OP;
+    }
+
+    op = it->token;
+
+    if (op == "+") return PLUS_OP;
+    else if (op == "-") return MINUS_OP;
+    else if (op == "*") return MULTI_OP;
+    else if (op == "**") return POWER_OP;
+    else if (op == "/") return DIVIDE_OP;
+    else if (op == "%") return MOD_OP;
+    else if (op == "==") return EQUAL_OP;
+    else if (op == "!=") return NOT_EQUAL;
+    else if (op == ">") return GREATER_THAN_OP;
+    else if (op == "<") return LESS_THAN_OP;
+    else if (op == ">=") return GREATER_THAN_OR_EQUAL_OP;
+    else if (op == "<=") return LESS_THAN_OR_EQUAL_OP;
+    else if (op == "&&") return AND_OP;
+    else if (op == "||") return OR_OP;
+    else if (op == "!") return NOT_OP;
+    else if (op == "&") return AND_BIT_OP;
+    else if (op == "|") return OR_BIT_OP;
+    else if (op == "^") return XOR_BIT_OP;
+    else if (op == "~") return NOT_BIT_OP;
+    else if (op == "<<") return LEFT_SHIFT_OP;
+    else if (op == ">>") return RIGHT_SHIFT_OP;
+    else if (op == "=") return ASSIGN_OP;
+    else if (op == "+=") return ADD_ASSIGN_OP;
+    else if (op == "-=") return SUB_ASSIGN_OP;
+    else if (op == "*=") return MULTI_ASSIGN_OP;
+    else if (op == "/=") return DIVIDE_ASSIGN_OP;
+    else if (op == "%=") return MODULUS_ASSIGN_OP;
+    else if (op == "**=") return POWER_AND_ASSIGN;
+    else if (op == "&=") return AND_BIT_ASSIGN_OP;
+    else if (op == "|=") return OR_BIT_ASSIGN_OP;
+    else if (op == "^=") return XOR_BIT_ASSIGN_OP;
+    else if (op == "<<=") return LEFT_SHIFT_ASSIGN_OP;
+    else if (op == ">>=") return RIGHT_SHIFT_ASSIGN_OP;
+
+    return NO_OP;
+}
+
+
 #endif

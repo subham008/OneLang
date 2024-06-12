@@ -26,7 +26,6 @@ struct ExpMinor{
  {    
  public:
     std::list<ExpMinor> exp_list;
-    
     Expression() {} 
  };  // end of  Expression
  
@@ -39,9 +38,10 @@ Expression consume_expression( Module& module ,    std::list<Token>::iterator& i
 
     Expression exp = Expression();
     it++; //reachng first value after equal_op
-    while(*it->token == "\n"){
+    while(*it->token == "\n"  || it != end){
         // parsing expression
-         
+        Value v= makevalue(it , end);
+        Operator op = 
          it++;// increasing to get next token after each loop
     }
   return exp;

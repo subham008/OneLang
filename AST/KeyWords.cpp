@@ -28,6 +28,7 @@ namespace keyword{
    const char* RETURN="return";
    const char* AS="as";
    const char* FUNCTION="fn";
+   const char* EXTENDS="extends";
    
 
    std::unordered_set<std::string>  keyword_set;
@@ -54,6 +55,7 @@ void fillkeywordSet(){
     keyword_set.insert(keyword::FUNCTION);
     keyword_set.insert(STATIC);
     keyword_set.insert(RETURN);
+    keyword_set.insert(EXTENDS);
 }
 
 

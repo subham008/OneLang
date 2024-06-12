@@ -27,11 +27,17 @@ int main(int argc, const char* argv[]){
   //lexer_test(argv[1]);
 
   Lexer lex( code , argv[1]);
+
   
   Module mod(lex.tokenize() , "name");
+
   mod.parse_tokens();
   mod.print_counts();
   
+
+  if(argc >=3 && string(argv[2])=="lex"){
+      lex.print_tokens();
+  }
 
     return 0;
 }// end of file

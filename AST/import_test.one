@@ -1,6 +1,6 @@
 import std.string.parse
-import /myLib.module.parse 
-import "c:/std/my/lib/none.onne"
+import /myLib.module.parse
+import "c:/std/my/lib/none.one"
 
 enum phone
     samsung

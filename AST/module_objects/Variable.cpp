@@ -5,11 +5,12 @@
    #include"Expression.cpp"
    #include"Value.cpp"
 
-   enum VariableType{
+   enum ValueType{
       INT,
       FLOAT,
       DOUBLE,
       STRING,
+      BOOLEAN,
       CHAR,
       INT8,
       INT16,
@@ -33,7 +34,7 @@
 
    class Variable{
     public:
-     VariableType type;
+     ValueType type;
      std::string type_name;
      std::string variable_name;
      Value value;

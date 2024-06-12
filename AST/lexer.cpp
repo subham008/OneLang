@@ -88,6 +88,15 @@ private:
 
 
 
+void print_tokens(){
+      for (const auto& token : tokens) {
+        if(token.token == "\n")
+        std::cout << "Token: " <<"END_OF_LINE"<<std::endl;
+        else
+        std::cout << "Token: " << token.token << ", Indent: " << token.indent_value << std::endl;
+    }
+}
+
 };
 
 void lexer_test(const std::string& filename) {
