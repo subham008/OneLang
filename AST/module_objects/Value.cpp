@@ -24,14 +24,14 @@ Value makeValue(std::list<Token>::iterator& it , std::list<Token>::iterator& end
 
       // for integer declaretion
       if(   isInteger(it->token)  ){
-          val.type = VariableType.INTEGER_DECLARETION;
-          val.
+          val.type = ValueType.INT;
+          
       }
       else if(isFloat(it->token)){
-          val.type = VariableType.FLOAT_DECLARETION;
+          val.type = ValueType.FLOAT;
       }
       else if( isDouble(it->token)  ){
-          val.type = VariableType.DOUBLE_DECLARETION;
+          val.type = ValueType.DOUBLE;
       }
 
 

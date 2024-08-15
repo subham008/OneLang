@@ -35,16 +35,14 @@
    class Variable{
     public:
      ValueType type;
-     std::string type_name;
-     std::string variable_name;
+     std::string& name;
      Value value;
+
+     Variable(ValueType ty,std::string& nm){
+        type = ty;
+        name=nm;
+     }
      
-     Variable(VariableType ty ,
-              std::string tn=" ",
-               std::string vn =" ", 
-               const  Value& ex =Expression() ): type(ty),type_name(tn),variable_name(vn),value(ex){}
-
-
    }; // end of variable
 
 
